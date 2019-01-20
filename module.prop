@@ -1,7 +1,7 @@
 id=logcat
 name=Log Catcher
-version=v5
-versionCode=5
+version=v6
+versionCode=6
 author=MlgmXyysd
-description=Catch bootloop log to /data/media/0/log/$time.log. QQ chat group 855219808.
+description=Catch bootloop log to /data/local/logs/$time.log. QQ chat group 855219808.
 minMagisk=17000
