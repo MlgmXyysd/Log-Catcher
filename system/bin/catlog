@@ -7,6 +7,8 @@ case "$1" in
     dura=60
     ;;
 esac
+lc_ver="v15"
+lc_vercode=15
 msg[0]="Now just a little more only just a little more..."
 msg[1]="It's not a right that I'm due, my duty that is must have been kept..."
 msg[2]="Since one day you will disappear, I'll keep every part of you..."
@@ -32,7 +34,7 @@ build=`getprop ro.build.id`
 mkdir -p $path
 echo "--------- beginning of head">>$file
 echo "Log Catcher by MlgmXyysd">>$file
-echo "Version: v14 (14)"
+echo "Version: ${lc_ver} (${lc_vercode}) (Cat log)">>$file
 echo "QQ chat group 855219808">>$file
 echo ${msg[$rand]}>>$file
 echo "--------- beginning of system info">>$file
@@ -46,6 +48,6 @@ echo "Device: ${device}">>$file
 echo "Manufacturer: ${manufacturer}">>$file
 echo "Brand: ${brand}">>$file
 echo "Product: ${product}">>$file
-logcat -v long *:V logcatcher-catlog-mlgmxyysd:V>>$file &
+logcat -v long *:V logcatcher-catlog-mlgmxyysd:S>>$file &
 sleep ${dura}s
-pkill -f logcatcher-catlog-mlgmxyysd:V
+pkill -f logcatcher-catlog-mlgmxyysd:S
