@@ -1,8 +1,8 @@
-# LogCat
+# Log-Catcher
 
 Catch boot log and save to /data/local/boot/boot-$time.log.
 
-##Command (in Terminal):
+## Command (in Terminal):
 
 ```
 catlog [(Int)duration=60]
@@ -10,7 +10,7 @@ catlog [(Int)duration=60]
 
 It will save the operation log in ${duration}s to /data/local/catlog/catlog-$time-${duration}s.log.
 
-##For module developer:
+## For module developer:
 
 This module can help you to save boot and app crash log.
 
