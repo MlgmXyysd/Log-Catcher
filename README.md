@@ -2,7 +2,7 @@
 
 Catch boot log and save to /data/local/boot/boot-$time.log.
 
-Error or Warning only log is saved to /data/local/error/error-$time.log.
+Error or Warning only log is saved to /data/local/boot_error/error-$time.log.
 
 ## Command (in Terminal):
 
