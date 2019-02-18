@@ -1,0 +1,51 @@
+#!/system/bin/sh
+case "$1" in 
+  [0-9]*)
+    dura=${1}
+    ;;
+  *)
+    dura=60
+    ;;
+esac
+msg[0]="Now just a little more only just a little more..."
+msg[1]="It's not a right that I'm due, my duty that is must have been kept..."
+msg[2]="Since one day you will disappear, I'll keep every part of you..."
+msg[3]="Yes we are time fliers scaling the walls of time climbers, tired of playing hide and seek with time..."
+msg[4]="Wherever you are in the world, I'll search for you..."
+msg[5]="Mitsuha. Mitsuha. Mitsuha, your name is Mitsuha..."
+msg[6]="Someone dear to me. I don't want to forget. I shouldn't forget!"
+time=$(date +%Y-%m-%d-%H-%M-%S)
+path=/data/local/catlog
+file=$path/catlog-${time}-${dura}s.log
+num=$(($RANDOM+100000000))
+rand=$(($num%7))
+android_sdk=`getprop ro.build.version.sdk`
+build_desc=`getprop ro.build.description`
+product=`getprop ro.build.product`
+manufacturer=`getprop ro.product.manufacturer`
+brand=`getprop ro.product.brand`
+fingerprint=`getprop ro.build.fingerprint`
+arch=`getprop ro.product.cpu.abi`
+device=`getprop ro.product.device`
+android=`getprop ro.build.version.release`
+build=`getprop ro.build.id`
+mkdir -p $path
+echo "--------- beginning of head">>$file
+echo "Log Catcher by MlgmXyysd">>$file
+echo "Version: v14 (14)"
+echo "QQ chat group 855219808">>$file
+echo ${msg[$rand]}>>$file
+echo "--------- beginning of system info">>$file
+echo "Android version: ${android}">>$file
+echo "Android sdk: ${android_sdk}">>$file
+echo "Android build: ${build}">>$file
+echo "Fingerprint: ${fingerprint}">>$file
+echo "ROM build description: ${build_desc}">>$file
+echo "Architecture: ${arch}">>$file
+echo "Device: ${device}">>$file
+echo "Manufacturer: ${manufacturer}">>$file
+echo "Brand: ${brand}">>$file
+echo "Product: ${product}">>$file
+logcat -v long *:V logcatcher-catlog-mlgmxyysd:V>>$file &
+sleep ${dura}s
+pkill -f logcatcher-catlog-mlgmxyysd:V
