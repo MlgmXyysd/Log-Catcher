@@ -1,7 +1,6 @@
 id=logcat
 name=Log Catcher
-version=v16
-versionCode=16
+version=v17
+versionCode=17
 author=MlgmXyysd
 description=Catch boot log to /data/local/boot/boot-$time.log. QQ chat group 855219808.
-minMagisk=17000
