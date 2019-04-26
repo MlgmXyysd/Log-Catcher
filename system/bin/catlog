@@ -7,8 +7,8 @@ case "$1" in
     dura=60
     ;;
 esac
-lc_ver="v15"
-lc_vercode=15
+lc_ver="v16"
+lc_vercode=16
 msg[0]="Now just a little more only just a little more..."
 msg[1]="It's not a right that I'm due, my duty that is must have been kept..."
 msg[2]="Since one day you will disappear, I'll keep every part of you..."

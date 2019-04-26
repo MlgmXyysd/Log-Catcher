@@ -1,8 +1,8 @@
 #!/system/bin/sh
 MODDIR=${0%/*}
 
-lc_ver="v15"
-lc_vercode=15
+lc_ver="v16"
+lc_vercode=16
 
 msg[0]="Now just a little more only just a little more..."
 msg[1]="It's not a right that I'm due, my duty that is must have been kept..."
@@ -48,7 +48,7 @@ echo "Device: ${device}">>$file
 echo "Manufacturer: ${manufacturer}">>$file
 echo "Brand: ${brand}">>$file
 echo "Product: ${product}">>$file
-logcat -v long *:V logcatcher-boot-mlgmxyysd:S>>$file &
+logcat -f $file -v long *:V logcatcher-boot-mlgmxyysd:S &
 
 path_err=/data/local/boot_error
 file_err=$path_err/error-$time.log
@@ -73,4 +73,4 @@ echo "Device: ${device}">>$file_err
 echo "Manufacturer: ${manufacturer}">>$file_err
 echo "Brand: ${brand}">>$file_err
 echo "Product: ${product}">>$file_err
-logcat -v long *:W logcatcher-boot-error-mlgmxyysd:S>>$file_err &
+logcat -f $file_err -v long *:W logcatcher-boot-error-mlgmxyysd:S &
