@@ -9,18 +9,10 @@ case "$1" in
 esac
 lc_ver="v18"
 lc_vercode=18
-msg[0]="Now just a little more only just a little more..."
-msg[1]="It's not a right that I'm due, my duty that is must have been kept..."
-msg[2]="Since one day you will disappear, I'll keep every part of you..."
-msg[3]="Yes we are time fliers scaling the walls of time climbers, tired of playing hide and seek with time..."
-msg[4]="Wherever you are in the world, I'll search for you..."
-msg[5]="Mitsuha. Mitsuha. Mitsuha, your name is Mitsuha..."
-msg[6]="Someone dear to me. I don't want to forget. I shouldn't forget!"
+
 time=$(date +%Y-%m-%d-%H-%M-%S)
-path=/data/local/catlog
-file=$path/catlog-${time}-${dura}s.log
-num=$(($RANDOM+100000000))
-rand=$(($num%7))
+LOGPATH=/data/local/catlog
+FILE=$LOGPATH/catlog-${time}-${dura}s.log
 android_sdk=`getprop ro.build.version.sdk`
 build_desc=`getprop ro.build.description`
 product=`getprop ro.build.product`
@@ -31,22 +23,21 @@ arch=`getprop ro.product.cpu.abi`
 device=`getprop ro.product.device`
 android=`getprop ro.build.version.release`
 build=`getprop ro.build.id`
-mkdir -p $path
-echo "--------- beginning of head">>$file
-echo "Log Catcher by MlgmXyysd">>$file
-echo "Version: ${lc_ver} (${lc_vercode}) (Cat log)">>$file
-echo ${msg[$rand]}>>$file
-echo "--------- beginning of system info">>$file
-echo "Android version: ${android}">>$file
-echo "Android sdk: ${android_sdk}">>$file
-echo "Android build: ${build}">>$file
-echo "Fingerprint: ${fingerprint}">>$file
-echo "ROM build description: ${build_desc}">>$file
-echo "Architecture: ${arch}">>$file
-echo "Device: ${device}">>$file
-echo "Manufacturer: ${manufacturer}">>$file
-echo "Brand: ${brand}">>$file
-echo "Product: ${product}">>$file
-logcat -v long *:V logcatcher-catlog-mlgmxyysd:S>>$file &
+mkdir -p $LOGPATH
+echo "--------- beginning of head">>$FILE
+echo "Log Catcher by MlgmXyysd">>$FILE
+echo "Version: ${lc_ver} (${lc_vercode}) (Cat log)">>$FILE
+echo "--------- beginning of system info">>$FILE
+echo "Android version: ${android}">>$FILE
+echo "Android sdk: ${android_sdk}">>$FILE
+echo "Android build: ${build}">>$FILE
+echo "Fingerprint: ${fingerprint}">>$FILE
+echo "ROM build description: ${build_desc}">>$FILE
+echo "Architecture: ${arch}">>$FILE
+echo "Device: ${device}">>$FILE
+echo "Manufacturer: ${manufacturer}">>$FILE
+echo "Brand: ${brand}">>$FILE
+echo "Product: ${product}">>$FILE
+logcat -v long *:V logcatcher-catlog-mlgmxyysd:S>>$FILE &
 sleep ${dura}s
 pkill -f logcatcher-catlog-mlgmxyysd:S

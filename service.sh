@@ -1,12 +1,12 @@
 #!/system/bin/sh
 MODDIR=${0%/*}
-file=/data/local/logcatcher/boot.lcs
-if [ ! -f "$file" ];
+FILE=/data/local/logcatcher/boot.lcs
+if [ ! -f "$FILE" ];
 then
   pkill -f logcatcher-boot-mlgmxyysd:S
 fi
-file_err=/data/local/logcatcher/error.lcs
-if [ ! -f "$file_err" ];
+FILE_ERR=/data/local/logcatcher/error.lcs
+if [ ! -f "$FILE_ERR" ];
 then
   pkill -f logcatcher-boot-error-mlgmxyysd:S
 fi

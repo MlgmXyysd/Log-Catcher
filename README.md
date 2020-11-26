@@ -1,8 +1,8 @@
 # Log-Catcher
 
-Catch boot log and save to /data/local/boot/boot-$time.log.
+Catch boot log and save to /cache/log/boot/boot-$time.log.
 
-Error or Warning only log is saved to /data/local/boot_error/error-$time.log.
+Error or Warning only log is saved to /cache/log/boot_error/error-$time.log.
 
 ## Command (in Terminal):
 

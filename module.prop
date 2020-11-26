@@ -3,5 +3,5 @@ name=Log Catcher
 version=v18
 versionCode=18
 author=MlgmXyysd,Howard
-description=Catch boot log to /data/local/boot/boot-$time.log.
+description=Catch boot log to /cache/log/boot/boot-$time.log.
 support=https://t.me/CodeOfMeowCat
