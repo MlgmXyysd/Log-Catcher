@@ -1,16 +1,8 @@
 #!/system/bin/sh
 MODDIR=${0%/*}
 
-lc_ver="v17"
-lc_vercode=17
-
-msg[0]="Now just a little more only just a little more..."
-msg[1]="It's not a right that I'm due, my duty that is must have been kept..."
-msg[2]="Since one day you will disappear, I'll keep every part of you..."
-msg[3]="Yes we are time fliers scaling the walls of time climbers, tired of playing hide and seek with time..."
-msg[4]="Wherever you are in the world, I'll search for you..."
-msg[5]="Mitsuha. Mitsuha. Mitsuha, your name is Mitsuha..."
-msg[6]="Someone dear to me. I don't want to forget. I shouldn't forget!"
+lc_ver="v18"
+lc_vercode=18
 
 time=$(date +%Y-%m-%d-%H-%M-%S)
 
@@ -35,8 +27,6 @@ touch $file
 echo "--------- beginning of head">>$file
 echo "Log Catcher by MlgmXyysd">>$file
 echo "Version: ${lc_ver} (${lc_vercode})">>$file
-echo "QQ chat group 855219808">>$file
-echo ${msg[$rand]}>>$file
 echo "--------- beginning of system info">>$file
 echo "Android version: ${android}">>$file
 echo "Android sdk: ${android_sdk}">>$file
@@ -60,8 +50,6 @@ touch $file_err
 echo "--------- beginning of head">>$file_err
 echo "Log Catcher by MlgmXyysd">>$file_err
 echo "Version: ${lc_ver} (${lc_vercode}) (Error log)">>$file_err
-echo "QQ chat group 855219808">>$file_err
-echo ${msg[$rand_err]}>>$file_err
 echo "--------- beginning of system info">>$file_err
 echo "Android version: ${android}">>$file_err
 echo "Android sdk: ${android_sdk}">>$file_err
