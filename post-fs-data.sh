@@ -43,8 +43,8 @@ echo "Brand: ${brand}" >>$FILE
 echo "Product: ${product}" >>$FILE
 echo "--------- beginning of dmesg" >>$FILE
 dmesg >>$FILE
-echo "--------- beginning of SELinux" >>$file
-getenforce >>$file
+echo "--------- beginning of SELinux" >>$FILE
+getenforce >>$FILE
 logcat -f $FILE -v long *:V logcatcher-boot-mlgmxyysd:S &
 
 if [ -d /cache ]; then
@@ -71,8 +71,8 @@ echo "Device: ${device}" >>$FILE_ERR
 echo "Manufacturer: ${manufacturer}" >>$FILE_ERR
 echo "Brand: ${brand}" >>$FILE_ERR
 echo "Product: ${product}" >>$FILE_ERR
-echo "--------- beginning of dmesg" >>$FILE
-dmesg >>$FILE
-echo "--------- beginning of SELinux" >>$file
-getenforce >>$file
+echo "--------- beginning of dmesg" >>$FILE_ERR
+dmesg >>$FILE_ERR
+echo "--------- beginning of SELinux" >>$FILE_ERR
+getenforce >>$FILE_ERR
 logcat -f $FILE_ERR -v long *:W logcatcher-boot-error-mlgmxyysd:S &
