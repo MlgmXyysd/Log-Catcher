@@ -1,12 +1,8 @@
 # Log-Catcher
 
-Catch boot log and save to /cache/log/boot/boot-$time.log.
+Catch boot log and save to /cache/bootlog/boot-$time.log.
 
-When /cache is not exist fallback to /data/local/boot/boot-$time.log.
-
-Error or Warning only log is saved to /cache/log/boot_error/error-$time.log.
-
-When /cache is not exist fallback to /data/local/boot_error/error-$time.log.
+When /cache is not exist fallback to /data/local/bootlog/boot-$time.log.
 
 ## Command (in Terminal):
 
@@ -21,7 +17,3 @@ It will save the operation log in ${duration}s to /data/local/catlog/catlog-$tim
 This module can help you to save boot and app crash log.
 
 If you don't want to kill the logcat process after boot completed, you can create /data/local/logcatcher/boot.lcs file.
-
-Error mode file is /data/local/logcatcher/error.lcs.
-
-QQ chat group 855219808.

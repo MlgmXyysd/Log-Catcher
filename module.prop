@@ -1,7 +1,7 @@
 id=logcat
 name=Log Catcher
-version=v18
-versionCode=18
+version=v19
+versionCode=19
 author=MlgmXyysd,Howard
 description=Catch boot log to /cache/log/boot/boot-$time.log.
 support=https://t.me/CodeOfMeowCat
