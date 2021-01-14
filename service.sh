@@ -1,9 +1,7 @@
 #!/system/bin/sh
 MODDIR=${0%/*}
-while sleep 5; do
-  if [[ -d "/sdcard/Android" ]] && [["$(getprop sys.boot_completed)"="1"]]; then
-    break
-  fi
+until [ -d "/storage/emulated/0/Android" ] && [ $(getprop sys.boot_completed) -eq 1 ]; do
+  sleep 5
 done
 
 FILE=/data/local/logcatcher/boot.lcs
