@@ -45,4 +45,4 @@ echo "--------- beginning of dmesg" >>$FILE
 dmesg >>$FILE
 echo "--------- beginning of SELinux" >>$FILE
 getenforce >>$FILE
-logcat -f $FILE -b all logcatcher-bootlog:S &
+logcat -f $FILE logcatcher-bootlog:S &

@@ -38,6 +38,6 @@ echo "Device: ${device}" >>$FILE
 echo "Manufacturer: ${manufacturer}" >>$FILE
 echo "Brand: ${brand}" >>$FILE
 echo "Product: ${product}" >>$FILE
-logcat -b all logcatcher-catlog-mlgmxyysd:S >>$FILE &
+logcat logcatcher-catlog-mlgmxyysd:S >>$FILE &
 sleep ${dura}s
 pkill -f logcatcher-catlog-mlgmxyysd:S
